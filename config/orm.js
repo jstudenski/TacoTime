@@ -5,11 +5,12 @@ var connection = require("../config/connection.js");
 // updateOne()
 
 var orm = {
-  selectAll: function() {
-    var queryString = "SELECT * FROM tacos_db";
+  selectAll: function(tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) throw err;
       console.log(result);
+      cb(result);
     });
 
   },
