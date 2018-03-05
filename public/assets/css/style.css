@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #FF847C;
+  background-color: #ffc3aa;
   margin: 0;
 }
 
@@ -8,5 +8,6 @@ h2 {
   font-family: 'Fredoka One', cursive;
   font-size: 3em;
   text-align: center;
-  color: #2A363B;
+  color: #ff5252;
+  text-shadow: 1px 2px 0px #8b272d;
 }

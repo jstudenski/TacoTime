@@ -12,20 +12,23 @@ router.get("/", function(req, res) {
 
   taco.all(function(data) {
 
-    var hbsObject = {
+    var object = {
       tacos: data
     };
-
-    // var hbsObject = {
-    //   tacos: "data"
-    // };
-
-
-    console.log(hbsObject);
-
-     res.render("index", hbsObject);
+    console.log(object);
+    res.render("index", object);
   });
 });
+
+router.post("/api/tacos", function(req, res) {
+  taco.create([
+    req.body.name
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
 
 
 

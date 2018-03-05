@@ -14,6 +14,33 @@ var orm = {
     });
 
   },
+
+  insertOne: function(tableInput, name, cb) {
+    var queryString = "INSERT INTO " + tableInput + " (taco_name) VALUES (?)";
+    connection.query(queryString, name, function(err, result) {
+      if (err) throw err;
+      console.log("Insert");
+      console.log(result);
+      cb(result);
+    });
+
+  },
+
+
+  //   connection.query("INSERT INTO quotes (author, quote) VALUES (?, ?)", [req.body.author, req.body.quote], function(
+  //   err,
+  //   result
+  // ) {
+  //   if (err) {
+  //     // If an error occurred, send a generic server faliure
+  //     return res.status(500).end();
+  //   }
+
+  //   // Send back the ID of the new quote
+  //   res.json({ id: result.insertId });
+  // });
+
+
   // selectWhere: function(tableInput, colToSearch, valOfCol) {
   //   var queryString = "SELECT * FROM ?? WHERE ?? = ?";
   //   connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
