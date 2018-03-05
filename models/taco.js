@@ -9,7 +9,7 @@ var taco = {
   // The variables cols and vals are arrays.
   create: function(newTacoName, cb) {
     orm.insertOne("tacos", newTacoName, function(res) {
-      //cb(res);
+      cb(res);
     });
   },
   // update: function(objColVals, condition, cb) {
