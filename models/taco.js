@@ -12,8 +12,14 @@ var taco = {
       cb(res);
     });
   },
-  // update: function(objColVals, condition, cb) {
-  //   orm.update("tacos", objColVals, condition, function(res) {
+  update: function(objColVals, condition, cb) {
+    orm.updateOne("tacos", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
+  // update: function(condition, cb) {
+  //   orm.updateOne("tacos", id, bool, function(res) {
   //     cb(res);
   //   });
   // }

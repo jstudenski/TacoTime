@@ -5,8 +5,8 @@ var connection = require("../config/connection.js");
 // updateOne()
 
 var orm = {
-  selectAll: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+  selectAll: function(table, cb) {
+    var queryString = "SELECT * FROM " + table + ";";
     connection.query(queryString, function(err, result) {
       if (err) throw err;
       // console.log(result);
@@ -15,14 +15,84 @@ var orm = {
 
   },
 
-  insertOne: function(tableInput, name, cb) {
-    var queryString = "INSERT INTO " + tableInput + " (taco_name) VALUES (?)";
+  insertOne: function(table, name, cb) {
+    var queryString = "INSERT INTO " + table + " (taco_name) VALUES (?)";
     connection.query(queryString, name, function(err, result) {
       if (err) throw err;
       cb(result);
     });
 
   },
+
+  // "UPDATE quotes SET author = ?, quote = ? WHERE id = ?",
+  //   [req.body.author, req.body.quote, req.params.id],
+
+
+  // "UPDATE products SET stock_quantity = (stock_quantity + ?) WHERE item_id = ?", [resp.qty, resp.id],
+  //  // An example of objColVals would be {name: panther, sleepy: true}
+  updateOne: function(table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table + " SET eaten = 1 WHERE "+condition
+    // var queryString = "UPDATE " + table;
+    // queryString += " SET ";
+    // queryString += objColVals; //objToSql(objColVals);
+    // queryString += " WHERE ";
+    // queryString += condition;
+    //console.log("J" +);
+    console.log(objColVals);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        console.log(err);
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
+
+//   app.put("/api/quotes/:id", function(req, res) {
+//   connection.query(
+//     "UPDATE quotes SET author = ?, quote = ? WHERE id = ?",
+//     [req.body.author, req.body.quote, req.params.id],
+//     function(err, result) {
+//       if (err) {
+//         // If an error occurred, send a generic server faliure
+//         return res.status(500).end();
+//       }
+//       else if (result.changedRows === 0) {
+//         // If no rows were changed, then the ID must not exist, so 404
+//         return res.status(404).end();
+//       }
+//       res.status(200).end();
+
+//     }
+//   );
+// });
+
+
+
+
+
+// update: function(table, objColVals, condition, cb) {
+//     var queryString = "UPDATE " + table;
+
+//     queryString += " SET ";
+//     queryString += objToSql(objColVals);
+//     queryString += " WHERE ";
+//     queryString += condition;
+
+//     console.log(queryString);
+//     connection.query(queryString, function(err, result) {
+//       if (err) {
+//         throw err;
+//       }
+
+//       cb(result);
+//     });
+//   },
+
+
+
 
 
   //   connection.query("INSERT INTO quotes (author, quote) VALUES (?, ?)", [req.body.author, req.body.quote], function(

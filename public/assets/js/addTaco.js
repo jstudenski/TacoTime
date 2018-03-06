@@ -23,10 +23,14 @@ $(".add-taco").on("submit", function(event) {
   $(".eatTaco").on("click", function(event) {
     var id = $(this).data("id");
 
+    var newState = {
+      eaten: 1
+    };
+
     // Send the DELETE request.
     $.ajax("/api/tacos/" + id, {
       type: "PUT",
-      data: updatedQuote
+      data: newState
     }).then(
       function() {
         //console.log("deleted id ", id);
@@ -35,5 +39,3 @@ $(".add-taco").on("submit", function(event) {
       }
     );
   });
-
-
