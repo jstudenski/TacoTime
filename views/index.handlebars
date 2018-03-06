@@ -18,16 +18,9 @@
 <ul>
   {{#each tacos}}
     {{#unless eaten}}
-       <li>
-<!--       <p><span class="label">ID:</span> {{this.id}}</p> -->
-      <p><span class="label">Taco:</span> {{this.taco_name}}</p>
-<!--       <p><span class="label">Eaten:</span> {{this.eaten}}</p> -->
-      <button data-id="{{this.id}}" class="eatTaco">Eat</button>
-      <button data-id="{{this.id}}" class="tossTaco">Toss</button>
+       {{> taco-item eaten=false}}
 
-{{!-- <a href="/{{this.id}}">Update this quote</a> --}}
 
-    </li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -37,16 +30,8 @@
 <ul>
   {{#each tacos}}
     {{#if eaten}}
- <li>
-<!--       <p><span class="label">ID:</span> {{this.id}}</p> -->
-      <p><span class="label">Taco:</span> {{this.taco_name}}</p>
-<!--       <p><span class="label">Eaten:</span> {{this.eaten}}</p> -->
-      <button data-id="{{this.id}}" class="eatTaco">Eat</button>
-      <button data-id="{{this.id}}" class="tossTaco">Toss</button>
 
-{{!-- <a href="/{{this.id}}">Update this quote</a> --}}
-
-    </li>
+       {{> taco-item eaten=true}}
     {{/if}}
   {{/each}}
 </ul>
