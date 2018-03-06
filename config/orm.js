@@ -38,7 +38,7 @@ var orm = {
     // queryString += " WHERE ";
     // queryString += condition;
     //console.log("J" +);
-    console.log(objColVals);
+
     connection.query(queryString, function(err, result) {
       if (err) {
         console.log(err);
