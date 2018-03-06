@@ -1,16 +1,5 @@
 <h2>TacoTime!</h2>
 
-<ul>
- {{#each tacos}}
-    <li>
-<!--       <p><span class="label">ID:</span> {{this.id}}</p> -->
-      <p><span class="label">Taco:</span> {{this.taco_name}}</p>
-<!--       <p><span class="label">Eaten:</span> {{this.eaten}}</p> -->
-    </li>
-  {{/each}}
-</ul>
-
-
 <form class="add-taco">
 
   <div class="form-group">
@@ -20,5 +9,25 @@
 
   <button type="submit">Add Taco</button>
 </form>
+
+
+
+
+
+<ul>
+ {{#each tacos}}
+    <li>
+<!--       <p><span class="label">ID:</span> {{this.id}}</p> -->
+      <p><span class="label">Taco:</span> {{this.taco_name}}</p>
+<!--       <p><span class="label">Eaten:</span> {{this.eaten}}</p> -->
+<button data-id="{{this.id}}" class="eatTaco">Eat</button>
+<button data-id="{{this.id}}" class="tossTaco">Toss</button>
+
+{{!-- <a href="/{{this.id}}">Update this quote</a> --}}
+
+    </li>
+  {{/each}}
+</ul>
+
 
 

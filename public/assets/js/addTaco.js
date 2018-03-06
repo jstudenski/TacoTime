@@ -19,3 +19,21 @@ $(".add-taco").on("submit", function(event) {
       }
     );
   });
+
+  $(".eatTaco").on("click", function(event) {
+    var id = $(this).data("id");
+
+    // Send the DELETE request.
+    $.ajax("/api/tacos/" + id, {
+      type: "PUT",
+      data: updatedQuote
+    }).then(
+      function() {
+        //console.log("deleted id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+

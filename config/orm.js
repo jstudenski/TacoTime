@@ -9,7 +9,7 @@ var orm = {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) throw err;
-      console.log(result);
+      // console.log(result);
       cb(result);
     });
 
@@ -19,8 +19,6 @@ var orm = {
     var queryString = "INSERT INTO " + tableInput + " (taco_name) VALUES (?)";
     connection.query(queryString, name, function(err, result) {
       if (err) throw err;
-      console.log("Insert");
-      console.log(result);
       cb(result);
     });
 
