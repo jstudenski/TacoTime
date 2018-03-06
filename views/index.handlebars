@@ -12,15 +12,12 @@
 
 
 
-
 <h3>Feed me!</h3>
 
 <ul>
   {{#each tacos}}
     {{#unless eaten}}
        {{> taco-item eaten=false}}
-
-
     {{/unless}}
   {{/each}}
 </ul>

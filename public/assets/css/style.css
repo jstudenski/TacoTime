@@ -15,3 +15,22 @@ h2 {
 p {
   margin: 0px;
 }
+
+.taco {
+    background: #fd6872;
+    width: 250px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    height: 50px;
+    overflow: hidden;
+}
+.taco-button {
+  background: #2196f3;
+  height: 100%;
+  width: 50px;
+  float: right;
+}
+
+.taco-title {
+  float: left;
+}

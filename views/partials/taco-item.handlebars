@@ -1,40 +1,10 @@
-{{!-- <li>
-  {{name}}
-
-  <button class="change-sleep" data-id="{{id}}">
-    {{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-  </button>
-
-  <button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li>
- --}}
-
-  <li>
-<!--       <p><span class="label">ID:</span> {{this.id}}</p> -->
-      <p><span class="label">Taco:</span> {{this.taco_name}}</p>
-<!--       <p><span class="label">Eaten:</span> {{this.eaten}}</p> -->
-
-{{!-- <button data-id="{{this.id}}" 
-
-
-class="eatTaco">Eat</button> --}}
-
-
-
-{{#if eaten}}
-<button data-id="{{this.id}}" class="clearTaco">Remove</button>
-{{else}}
-<button data-id="{{this.id}}" class="eatTaco">Eat</button>
-{{/if}}
-
-
-      
-
-    {{!--   <button data-id="{{this.id}}" class="tossTaco">Toss</button> --}}
-
-{{!-- <a href="/{{this.id}}">Update this quote</a> --}}
-
-    </li>
-
-
-
+<div class="taco">
+  <div class="taco-title">
+  <p><span class="label">Taco:</span> {{this.taco_name}}</p>
+  </div>
+  {{#if eaten}}
+    <div data-id="{{this.id}}" class="taco-button clearTaco">Remove</div>
+  {{else}}
+    <div data-id="{{this.id}}" class="taco-button eatTaco">Eat</div>
+  {{/if}}
+</div>
