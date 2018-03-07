@@ -17,20 +17,39 @@ p {
 }
 
 .taco {
-    background: #fd6872;
-    width: 250px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    height: 50px;
-    overflow: hidden;
+  background: #fd6872;
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  height: 50px;
+  overflow: hidden;
 }
 .taco-button {
   background: #2196f3;
   height: 100%;
   width: 50px;
   float: right;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .taco-title {
   float: left;
 }
+
+.container {
+
+  background-color: red;
+  width: 800px;
+  margin: 30px auto
+}
+
+.panel {
+  float: left;
+  width: 400px;
+  background-color: blue;
+}
+
