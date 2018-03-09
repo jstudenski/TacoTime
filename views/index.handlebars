@@ -1,170 +1,44 @@
-
-
-
-
-
-
 <div id="left"></div>
 <div id="right"></div>
-
 <div id="bottom"></div>
 
-
 <header id="top">
-<h2>TacoTime!</h2>
 
+  <h2>TacoTime!</h2>
 
-
-<form class="add-taco">
-
-
-{{!--   <table> --}}
-
-{{!--     <tr>
-      <td> --}}
+  <form class="add-taco">
     <button type="submit">Add Taco</button>
     <div class="form-group">
       <input type="text" id="name" name="name" placeholder="Add taco..." />
     </div>
-
-{{!--       </td>
-      <td> --}}
-        
-{{!--       </td>
-    </tr> --}}
-
-{{!--   </table> --}}
-
-
-
-
-
-</form>
-
-
-
-
-
-
-
-
-
-{{!-- 
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <div class="box">
-    <div class="container-4">
-      <input type="search" id="search" placeholder="Add taco..." />
-      <button class="icon"><i class="fa fa-search"></i></button>
-    </div>
-  </div>
-
-
- --}}
-
-
-
+  </form>
 
 </header>
 
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <main>
   
- {{!--  hello --}}
-
   <div class="panel">
-    
-<h3>Feed me!</h3>
 
+    <h3>Feed me!</h3>
 
-  {{#each tacos}}
-    {{#unless eaten}}
-       {{> taco-item eaten=false}}
-    {{/unless}}
-  {{/each}}
-
-
+    {{#each tacos}}
+      {{#unless eaten}}
+         {{> taco-item eaten=false}}
+      {{/unless}}
+    {{/each}}
 
   </div>
-
   <div class="panel">
-<h3>Tacos that are eaten!</h3>
+    <h3>Tacos that are eaten!</h3>
 
-  {{#each tacos}}
-    {{#if eaten}}
+    {{#each tacos}}
+      {{#if eaten}}
 
-       {{> taco-item eaten=true}}
-    {{/if}}
-  {{/each}}
+        {{> taco-item eaten=true}}
+      {{/if}}
+    {{/each}}
 
   </div>
-
 
 </main>
-{{!-- 
-
-<div class="white-border">
-<div class="inside">
-
-<header class="header">
-   <h2>TacoTime!</h2>
-
-</header>
-
-<div class="container">
-
-
- 
-
-
-
-
-  <div class="panel">
-
-
-
-
-  </div>
-
-
-
-
-  <div class="panel">
-    
-<h3>Feed me!</h3>
-
-
-  {{#each tacos}}
-    {{#unless eaten}}
-       {{> taco-item eaten=false}}
-    {{/unless}}
-  {{/each}}
-
-
-
-  </div>
-
-  <div class="panel">
-<h3>Tacos that are eaten!</h3>
-
-  {{#each tacos}}
-    {{#if eaten}}
-
-       {{> taco-item eaten=true}}
-    {{/if}}
-  {{/each}}
-
-  </div>
-
-</div>
-
-
-</div>
-</div>
-
-
-
-
- --}}
-
