@@ -1,5 +1,3 @@
-console.log("Hello world!!");
-
 $(".add-taco").on("submit", function(event) {
     event.preventDefault();
 
@@ -34,6 +32,22 @@ $(".add-taco").on("submit", function(event) {
     }).then(
       function() {
         //console.log("deleted id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+
+ $(".deleteTaco").on("click", function(event) {
+    var id = $(this).data("id");
+
+    // Send the DELETE request.
+    $.ajax("/api/tacos/" + id, {
+      type: "DELETE",
+    }).then(
+      function() {
+        console.log("deleted taco", id);
         // Reload the page to get the updated list
         location.reload();
       }

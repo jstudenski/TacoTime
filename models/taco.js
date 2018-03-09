@@ -17,12 +17,11 @@ var taco = {
       cb(res);
     });
   },
-
-  // update: function(condition, cb) {
-  //   orm.updateOne("tacos", id, bool, function(res) {
-  //     cb(res);
-  //   });
-  // }
+  delete: function(condition, cb) {
+    orm.delete("tacos", condition, function(res) {
+      cb(res);
+    });
+  }
 };
 
 // Export the database functions for the controller (catsController.js).
