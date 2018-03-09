@@ -19,13 +19,13 @@
     
 <h3>Feed me!</h3>
 
-<ul>
+
   {{#each tacos}}
     {{#unless eaten}}
        {{> taco-item eaten=false}}
     {{/unless}}
   {{/each}}
-</ul>
+
 
 
   </div>
@@ -33,16 +33,12 @@
   <div class="panel">
 <h3>Tacos that are eaten!</h3>
 
-<ul>
   {{#each tacos}}
     {{#if eaten}}
 
        {{> taco-item eaten=true}}
     {{/if}}
   {{/each}}
-</ul>
-
-
 
   </div>
 
