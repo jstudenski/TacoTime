@@ -1,18 +1,14 @@
+/* #ffc3aa;*/
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #c0dfcf;/* #ffc3aa;*/
-  margin: 0;
+  background-color: #c0dfcf;/
 }
-
-h2 {
-  margin: 0px;
-  font-family: 'Fredoka One', cursive;
-  font-size: 3em;
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  color: #ff5252;
-  text-shadow: 1px 2px 0px #8b272d;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 
@@ -45,38 +41,39 @@ h2 {
 }
 
 .add-taco {
-  background-color: yellow;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   right: 15px;
+  width: 100%;
 }
-
 
 #name {
-  height: 40px;
   width: 200px;
   padding: 15px;
-  font-size: 10pt;
   box-sizing: border-box;
   border: 0.01em solid #d9d9d9;
+  height: 40px;
+  float: right;
 }
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3em;
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  color: #ff5252;
+  text-shadow: 1px 2px 0px #8b272d;
+}
+
 
 button[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
+  background-color: #ff5252;
+  color: #ffffff;
+  padding: 12px 10px;
   border: none;
   cursor: pointer;
-}
-/*
-
-#mc4wp-form-1 > input[type="email"] {
-
-}
-*/
-
-table {
-  border: 1px solid red;
+  height: 40px;
   float: right;
 }
 
@@ -95,113 +92,15 @@ main {
 
 
 
-.container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.container-4 input#search{
-  width: 300px;
-  height: 50px;
-  background: #2b303b;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.container-4 input#search::-webkit-input-placeholder {
-   color: #65737e;
-}
- 
-.container-4 input#search:-moz-placeholder { /* Firefox 18- */
-   color: #65737e;  
-}
- 
-.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
-   color: #65737e;  
-}
- 
-.container-4 input#search:-ms-input-placeholder {  
-   color: #65737e;  
-}
-
-.container-4 button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
- 
-  border: none;
-  background: #232833;
-  height: 50px;
-  width: 50px;
-  color: #4f5b66;
-  opacity: 0;
-  font-size: 10pt;
- 
-  -webkit-transition: all .55s ease;
-  -moz-transition: all .55s ease;
-  -ms-transition: all .55s ease;
-  -o-transition: all .55s ease;
-  transition: all .55s ease;
-}
-
-.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-  outline: none;
-  opacity: 1;
-  margin-left: -50px;
-}
- 
-.container-4:hover button.icon:hover{
-  background: white;
-}
-
-
-
-
-
-
-/*
-.white-border {
-  background-color: white;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  height:100vh;
-
-}*/
-/*
-.inside {
-  width: 100%;
-  background-color: #c0dfcf; 
-  height: calc(100vh - 40px); 
-}*/
-/*
-.header {
-  background-color: #fff; 
-  width: 100%;
-  height: 150px;
-  position: relative;
-}
-*/
 
 .taco {
   background: #fd6872;
   width: 250px;
   margin: 5px auto;
-/*  border-radius: 4px;*/
   height: 50px;
   overflow: hidden;
 }
+
 .taco-button {
   background: #2196f3;
   height: 100%;
@@ -223,6 +122,4 @@ main {
   width: 800px;
   margin: auto;
 }
-
-
 
