@@ -16,11 +16,17 @@
 </header>
 
 
+
 <main>
+
+ <div class="cool-header"><h3>Eat Me!</h3></div>
   
   <div class="panel">
 
-    <h3>Feed me!</h3>
+
+    <div class="panel-title">
+      <h3>Eat Me!</h3>
+    </div>
 
     {{#each tacos}}
       {{#unless eaten}}
@@ -30,8 +36,9 @@
 
   </div>
   <div class="panel">
-    <h3>Tacos that are eaten!</h3>
-
+    <div class="panel-title">
+      <h3>Tacos you've eaten!</h3>
+    </div>
     {{#each tacos}}
       {{#if eaten}}
 

@@ -16,4 +16,12 @@
   </body>
 
   <script src="/assets/js/addTaco.js"></script>
+
+  <script type="text/javascript">
+  $(window).scroll(function(){
+      $(".cool-header").css("top",Math.max(0,50-$(this).scrollTop()));
+  });
+</script>
+
+
 </html>

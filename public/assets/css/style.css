@@ -14,7 +14,7 @@ button:focus {
 #top, #bottom, #left, #right {
   background: #fff;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 #left, #right {
   top: 0; bottom: 0;
@@ -73,13 +73,22 @@ button[type=submit] {
 main {
   width: calc(100% - 30px);
   margin: 165px auto;
+  max-width: 750px;
 }
 
 .panel {
   float: left;
   width: 50%;
   padding-bottom: 100px;
+  padding-top: 43px;
 }
+
+.panel-title {
+  width: 250px;
+  margin: 25px auto 8px auto;
+  font-size: 18px;
+}
+
 
 .taco {
   background: #fff;
@@ -101,7 +110,7 @@ main {
 }
 
 .taco-button {
-  background: #368d8a;
+  background: #3D5B82;
   text-shadow: 1px 1px 0 #014947;
   text-align: center;
   height: 100%;
@@ -121,3 +130,25 @@ main {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.cool-header {
+  position:fixed;
+  top:50px;
+  background-color: #9eccb6;
+  height: 200px;
+  width: 375px;
+  z-index: 1;
+    display: flex;
+}
+
+.cool-header h3 {
+    align-self: flex-end;
+    width: 250px;
+    color: #404040;
+    font-size: 21px;
+ /*   background-color: pink;*/
+    margin: 0px auto;
+    padding-bottom: 7px;
+}
+
+/*#3D5B82;*/ 
