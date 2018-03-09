@@ -26,10 +26,12 @@ button:focus {
 #top { 
   top: 0; 
   height: 165px;
+/*  border-bottom: 1px solid #00000026*/
 }
 #bottom { 
   bottom: 0; 
   height: 15px;
+/*  border-top: 1px solid #00000026*/
 }
 
 .add-taco {
@@ -70,18 +72,33 @@ button[type=submit] {
   float: right;
 }
 
-main {
+button[type=submit]:hover {
+  background-color: #db3737;
+}
+
+.container {
   width: calc(100% - 30px);
   margin: 165px auto;
   max-width: 750px;
 }
 
+
 .panel {
   float: left;
   width: 50%;
-  padding-bottom: 100px;
-  padding-top: 43px;
 }
+
+main .panel {
+  padding-bottom: 500px;
+  padding-top: 85px;
+}
+
+nav .panel {
+/*margin: 8px auto;*/
+
+}
+
+
 
 .panel-title {
   width: 250px;
@@ -111,7 +128,7 @@ main {
 
 .taco-button {
   background: #3D5B82;
-  text-shadow: 1px 1px 0 #014947;
+  text-shadow: 1px 1px 0 #203c5c;
   text-align: center;
   height: 100%;
   width: 50px;
@@ -121,7 +138,7 @@ main {
   font-size: 16px;
 }
 .taco-button:hover {
-  background: #014947;
+  background: #203c5c;
 }
 
 
@@ -132,23 +149,34 @@ main {
 }
 
 .cool-header {
+  width: 100%;
+/*  margin: 165px auto;*/
+/*  max-width: 750px;*/
+}
+
+
+.cool-header {
   position:fixed;
   top:50px;
   background-color: #9eccb6;
   height: 200px;
-  width: 375px;
+/*  width: 375px;*/
+
   z-index: 1;
     display: flex;
 }
 
 .cool-header h3 {
-    align-self: flex-end;
-    width: 250px;
-    color: #404040;
-    font-size: 21px;
- /*   background-color: pink;*/
-    margin: 0px auto;
-    padding-bottom: 7px;
+  align-self: flex-end;
+  width: 250px;
+  color: #404040;
+  font-size: 16px;
+/*  background-color: salmon;*/
+  margin: 0px auto;
+  height: 35px;
+  box-sizing: border-box;
+  padding-top: 10px;
 }
+
 
 /*#3D5B82;*/ 
