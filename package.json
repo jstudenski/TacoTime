@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "sass": "node-sass-chokidar --output-style compressed public/assets/css/style.scss > public/assets/css/style.css",
+    "watch": "node-sass-chokidar --watch public/assets/css/ --output public/assets/css/"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "node-sass-chokidar": "^1.1.0"
   }
 }
