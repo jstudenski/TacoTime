@@ -1,4 +1,4 @@
-<img src="README-logo.svg" alt="alt text" width="200">
+<img src="README-logo.svg" alt="alt text" width="250">
 
 node 
 express
