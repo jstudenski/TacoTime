@@ -8,15 +8,13 @@ This taco tool was built using  MySQL, Node, Express, Handlebars a homemade ORM 
 ### Run
 `node server.js`
 
-## Compile Sass
+#### Compile Sass
 `npm run compile:sass`
 
-## Watch Sass for changes
+#### Watch Sass for changes
 `npm run watch:sass`
 
-
-
-### Technologies 
+#### Technologies 
 
 * <a href="https://handlebarsjs.com/">Handlebars</a> - a minimal templating engine <br>
 * <a href="https://expressjs.com/">Express</a> - a node.js web application framework <br>
