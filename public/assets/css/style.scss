@@ -1,8 +1,35 @@
-/* #ffc3aa;*/
+$mint: #c0dfcf;
+$dark-mint: #9eccb6;
+$pink: #ffc3aa;
+$white: #ffffff;
+$light: #d9d9d9;
+$dark: #404040;
+$sunset: #ff5252;
+$sunset-dark: #8b272d;
+$punch: #db3737;
+$blue: #3D5B82;
+$blue-dark: #203c5c;
+
+
+$border-width: 15px;
+$border-top-height: 165px;
+
+$panel-item-width: 250px;
+
+//font
+$small: 11px;
+$medium: 18px;
+$logo: 3em;
+
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #c0dfcf;
+  background-color: $mint;
 }
 
 input:focus,
@@ -13,38 +40,38 @@ button:focus {
 }
 
 #top, #bottom, #left, #right {
-  background: #fff;
+  background: $white;
   position: fixed;
   z-index: 2;
 }
 #left, #right {
   top: 0; bottom: 0;
-  width: 15px;
+  width: $border-width;
 }
 #left { left: 0;}
 #right { right: 0;}
 #top, #bottom { left: 0; right: 0;}
 #top { 
   top: 0; 
-  height: 165px;
+  height: $border-top-height;
 }
 #bottom { 
   bottom: 0; 
-  height: 15px;
+  height: $border-width;
 }
 
 .add-taco {
   position: absolute;
   bottom: 10px;
-  right: 15px;
+  right: $border-width;
   width: 50%;
 }
 
 #name {
   width: 200px;
-  padding: 15px;
+  padding: $border-width;
   box-sizing: border-box;
-  border: 0.01em solid #d9d9d9;
+  border: 0.01em solid $light;
   border-right: 0;
   height: 40px;
   float: right;
@@ -52,17 +79,17 @@ button:focus {
 
 h2 {
   font-family: 'Fredoka One', cursive;
-  font-size: 3em;
+  font-size: $logo;
   position: absolute;
   bottom: 5px;
-  left: 15px;
-  color: #ff5252;
-  text-shadow: 1px 2px 0px #8b272d;
+  left: $border-width;
+  color: $sunset;
+  text-shadow: 1px 2px 0px $sunset-dark;
 }
 
 
 button[type=submit] {
-  background-color: #ff5252;
+  background-color: $sunset;
   color: #ffffff;
 /*  padding: 12px 10px;*/
   border: none;
@@ -72,7 +99,7 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-  background-color: #db3737;
+  background-color: $punch;
 }
 
 .container {
@@ -100,15 +127,15 @@ nav .panel {
 
 
 .panel-title {
-  width: 250px;
+  width: $panel-item-width;
   margin: 25px auto 8px auto;
-  font-size: 18px;
+  font-size: $medium;
 }
 
 
 .taco {
-  background: #fff;
-  width: 250px;
+  background: $white;
+  width: $panel-item-width;
   margin: 8px auto;
   height: 45px;
   overflow: hidden;
@@ -119,32 +146,30 @@ nav .panel {
 .taco-title {
   float: left;
   padding-left: 16px;
-  font-size: 11px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: $small;
+  @include vertical-center;
 }
 
 .taco-button {
-  background: #3D5B82;
-  text-shadow: 1px 1px 0 #203c5c;
+  background: $blue;
+  text-shadow: 1px 1px 0 $blue-dark;
   text-align: center;
   height: 100%;
   width: 50px;
   float: right;
   font-weight: 600;
   color: #ffffff;
-  font-size: 16px;
+  font-size: $medium;
 }
 .taco-button:hover {
-  background: #203c5c;
+  background: $blue-dark;
 }
+
+
 
 
 .taco-button p {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  @include vertical-center;
 }
 
 .cool-header {
@@ -153,29 +178,23 @@ nav .panel {
 /*  max-width: 750px;*/
 }
 
-
 .cool-header {
   position:fixed;
   top:50px;
-  background-color: #9eccb6;
+  background-color: $dark-mint;
   height: 200px;
-/*  width: 375px;*/
-
   z-index: 1;
-    display: flex;
+  display: flex;
 }
 
 .cool-header h3 {
   align-self: flex-end;
-  width: 250px;
-  color: #404040;
-  font-size: 16px;
+  width: $panel-item-width;
+  color: $dark;
+  font-size: $medium;
 /*  background-color: salmon;*/
   margin: 0px auto;
   height: 35px;
   box-sizing: border-box;
   padding-top: 10px;
 }
-
-
-/*#3D5B82;*/ 
