@@ -31,13 +31,11 @@ button:focus {
 
 #top {
   top: 0;
-  height: 165px;
-  /*  border-bottom: 1px solid #00000026*/ }
+  height: 165px; }
 
 #bottom {
   bottom: 0;
-  height: 15px;
-  /*  border-top: 1px solid #00000026*/ }
+  height: 15px; }
 
 .add-taco {
   position: absolute;
