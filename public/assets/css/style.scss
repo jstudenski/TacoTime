@@ -97,14 +97,12 @@ button[type=submit] {
   height: 40px;
   float: right;
   font-size: $small;
-}
-
-button[type=submit] p {
-  @include vertical-center;
-}
-
-button[type=submit]:hover {
-  background-color: $punch;
+  p {
+    @include vertical-center;
+  }
+  &:hover {
+    background-color: $punch;
+  }
 }
 
 .container {
@@ -112,7 +110,6 @@ button[type=submit]:hover {
   margin: 165px auto;
   max-width: 750px;
 }
-
 
 .panel {
   float: left;
@@ -123,13 +120,6 @@ main .panel {
   padding-bottom: 500px;
   padding-top: 85px;
 }
-
-nav .panel {
-/*margin: 8px auto;*/
-
-}
-
-
 
 .panel-title {
   width: $panel-item-width;
@@ -146,8 +136,6 @@ nav .panel {
   overflow: hidden;
 }
 
-
-
 .taco-title {
   float: left;
   padding-left: 16px;
@@ -157,50 +145,37 @@ nav .panel {
 
 .taco-button {
   background: $blue;
-  text-shadow: 1px 1px 0 $blue-dark;
-  text-align: center;
   height: 100%;
   width: 50px;
   float: right;
-  font-weight: 600;
+  font-size: $small;
+  text-align: center;
   color: #ffffff;
-  font-size: $medium;
+  &:hover {
+    background: $blue-dark;
+  }
+  p, .icon {
+      @include vertical-center;
+  }
 }
-.taco-button:hover {
-  background: $blue-dark;
-}
-
-
-
-
-.taco-button p, .taco-button .icon{
-  @include vertical-center;
-}
-
 
 .cool-header {
   width: 100%;
-/*  margin: 165px auto;*/
-/*  max-width: 750px;*/
-}
-
-.cool-header {
   position:fixed;
   top:50px;
   background-color: $dark-mint;
   height: 200px;
   z-index: 1;
   display: flex;
-}
-
-.cool-header h3 {
-  align-self: flex-end;
-  width: $panel-item-width;
-  color: $dark;
-  font-size: $medium;
-/*  background-color: salmon;*/
-  margin: 0px auto;
-  height: 35px;
-  box-sizing: border-box;
-  padding-top: 10px;
+  h3 {
+    align-self: flex-end;
+    width: $panel-item-width;
+    color: $dark;
+    font-size: $medium;
+      // background-color: salmon;
+    margin: 0px auto;
+    height: 35px;
+    box-sizing: border-box;
+    padding-top: 10px;
+  }
 }
