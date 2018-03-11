@@ -11,15 +11,15 @@ $blue: #3D5B82;
 $blue-dark: #203c5c;
 
 
-$border-width: 15px;
+$border-width: 20px;
 $border-top-height: 165px;
 
 $panel-item-width: 250px;
 
 //font
-$small: 11px;
+$small: 15px; //11
 $medium: 18px;
-$logo: 3em;
+$logo: 55px;
 
 @mixin vertical-center {
   position: relative;
@@ -75,6 +75,7 @@ button:focus {
   border-right: 0;
   height: 40px;
   float: right;
+  font-size: $small;
 }
 
 h2 {
@@ -91,11 +92,15 @@ h2 {
 button[type=submit] {
   background-color: $sunset;
   color: #ffffff;
-/*  padding: 12px 10px;*/
   border: none;
   cursor: pointer;
   height: 40px;
   float: right;
+  font-size: $small;
+}
+
+button[type=submit] p {
+  @include vertical-center;
 }
 
 button[type=submit]:hover {
@@ -168,9 +173,10 @@ nav .panel {
 
 
 
-.taco-button p {
+.taco-button p, .taco-button .icon{
   @include vertical-center;
 }
+
 
 .cool-header {
   width: 100%;
